@@ -4,11 +4,10 @@ import CtaSection from '@/components/homepage/cta-section'
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <main className="flex-1">
+      <main className="    flex-1">
         {/* Hero Section */}
-        <HeroSection />
-        {/* CTA Section */}
-        <CtaSection />
+  <HeroSection />
+       {/* CTA Section */}   <CtaSection />
       </main>
     </div>
   )
