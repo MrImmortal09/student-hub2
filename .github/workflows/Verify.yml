@@ -1,5 +1,7 @@
 name: Verify
 on:
+  push:
+  pull_request:
   workflow_call:
   workflow_dispatch:
 
@@ -18,10 +20,10 @@ jobs:
         uses: ./.github/actions/install-deps
 
       - name: Lint repo
-        run: npm lint:repo
+        run: npm run lint:repo
 
       - name: Lint code
-        run: npm lint
+        run: npm run lint
 
   build:
     name: Build
@@ -50,6 +52,4 @@ jobs:
         uses: ./.github/actions/install-deps
 
       - name: Check types
-        run: npm typecheck
-
-
+        run: npm run typecheck
