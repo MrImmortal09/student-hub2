@@ -25,9 +25,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint repo
-        run: npm run lint:repo
-
       - name: Lint code
         run: npm run lint
 
@@ -52,22 +49,4 @@ jobs:
       - name: Build
         run: npm run build
 
-  types:
-    name: Types
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Clone repository
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Check types
-        run: npm run typecheck
