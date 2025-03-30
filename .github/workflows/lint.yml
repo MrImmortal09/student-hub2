@@ -10,10 +10,13 @@ on:
 
 jobs:
   lint:
+    name: Lint
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Clone repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -21,8 +24,9 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npm install
+      - name: Lint repo
+        run: pnpm lint:repo
 
-      - name: Run ESLint
-        run: npm run lint
+      - name: Lint code
+        run: pnpm lint
+
