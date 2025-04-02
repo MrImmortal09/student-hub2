@@ -158,6 +158,12 @@ npm run dev
 
 The app will be available at **http://localhost:3000**.
 
+#### **To Run the lint file:**
+
+```bash
+npm run lint
+```
+
 ---
 
 ## **📁 Project Structure**
